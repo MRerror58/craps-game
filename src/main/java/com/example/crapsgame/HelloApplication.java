@@ -14,14 +14,15 @@ import java.io.IOException;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        // FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("crap-view.fxml"));
+        Parent root = fxmlLoader.load();
 
 
-        VBox root = new VBox();
-        Button helloButton = new Button("HOLA HDP");
-        Label label = new Label("Escriba algo");
-        root.getChildren().add(label);
-        root.getChildren().add(helloButton);
+        //VBox root = new VBox();
+        //Button helloButton = new Button("HOLA HDP");
+        //Label label = new Label("Escriba algo");
+        //root.getChildren().add(label);
+        //root.getChildren().add(helloButton);
 
         Scene scene = new Scene(root, 320, 240);
         stage.setTitle("Ventana");
